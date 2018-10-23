@@ -1,45 +1,45 @@
 (define (problem turismomm-1)
     (:domain turismomm)
     (:objects
-     joao jose maria ;; turistas
+     turist-joao turist-jose turist-maria ;; turistas
      bike1 bike2 bike3 bike4 bike5 bike6 bike7 bike8 ;; bikes
-     B16-PcaDoDiario B19-MercadoSJ B07-SantaRita B05-Alfandega B05-CaisDoApolo B15-PcaDaRepublica ;; pontos de Bike PE
+     station-PcaDoDiario station-MercadoSJ station-SantaRita station-Alfandega station-CaisDoApolo station-PcaDaRepublica ;; pontos de Bike PE
      MercadoSJ IgNossaSraDosPretos PacoAlfandega BancoDoBrasil ;; pontos turísticos
     )
 
     (:init
      ;; caminhos entre pontos
-     (adj B15-PcaDaRepublica B16-PcaDoDiario) (adj B16-PcaDoDiario B15-PcaDaRepublica)
-     (adj B15-PcaDaRepublica B05-CaisDoApolo) (adj B05-CaisDoApolo B15-PcaDaRepublica)
-     (adj B16-PcaDoDiario B19-MercadoSJ) (adj B19-MercadoSJ B16-PcaDoDiario)
-     (adj B16-PcaDoDiario B07-SantaRita) (adj B16-PcaDoDiario B07-SantaRita)
-     (adj B19-MercadoSJ B07-SantaRita) (adj B07-SantaRita B19-MercadoSJ)
-     (adj B07-SantaRita B05-Alfandega) (adj B05-Alfandega B07-SantaRita)
-     (adj B05-Alfandega B05-CaisDoApolo) (adj B05-CaisDoApolo B05-Alfandega)
+     (adj station-PcaDaRepublica station-PcaDoDiario) (adj station-PcaDoDiario station-PcaDaRepublica)
+     (adj station-PcaDaRepublica station-CaisDoApolo) (adj station-CaisDoApolo station-PcaDaRepublica)
+     (adj station-PcaDoDiario station-MercadoSJ) (adj station-MercadoSJ station-PcaDoDiario)
+     (adj station-PcaDoDiario station-SantaRita) (adj station-PcaDoDiario station-SantaRita)
+     (adj station-MercadoSJ station-SantaRita) (adj station-SantaRita station-MercadoSJ)
+     (adj station-SantaRita station-Alfandega) (adj station-Alfandega station-SantaRita)
+     (adj station-Alfandega station-CaisDoApolo) (adj station-CaisDoApolo station-Alfandega)
 
      ;; caminhos de pontos de bike a pontos turisticos
-     (walkable B16-PcaDoDiario IgNossaSraDosPretos) (walkable IgNossaSraDosPretos B16-PcaDoDiario)
-     (walkable B19-MercadoSJ MercadoSJ) (walkable MercadoSJ B19-MercadoSJ)
-     (walkable B05-Alfandega PacoAlfandega) (walkable PacoAlfandega B05-Alfandega)
-     (walkable B05-CaisDoApolo BancoDoBrasil) (walkable BancoDoBrasil B05-CaisDoApolo)
+     (walkable station-PcaDoDiario IgNossaSraDosPretos) (walkable IgNossaSraDosPretos station-PcaDoDiario)
+     (walkable station-MercadoSJ MercadoSJ) (walkable MercadoSJ station-MercadoSJ)
+     (walkable station-Alfandega PacoAlfandega) (walkable PacoAlfandega station-Alfandega)
+     (walkable station-CaisDoApolo BancoDoBrasil) (walkable BancoDoBrasil station-CaisDoApolo)
 
      ;; localizações iniciais dos turistas
-     (at joao B16-PcaDoDiario)
-     (at maria B05-Alfandega)
-     (at jose B05-CaisDoApolo)
+     (at turist-joao station-PcaDoDiario)
+     (at turist-maria station-Alfandega)
+     (at turist-jose station-CaisDoApolo)
 
      ;; localizações iniciais das bikes
-     (at bike1 B15-PcaDaRepublica) ;; 1 na Pça da Rep.
-     (at bike2 B16-PcaDoDiario) ;; 1 na Pça do Diario
-     (at bike3 B05-CaisDoApolo) ;; 1 no Cais
-     (at bike4 B19-MercadoSJ)
-     (at bike5 B19-MercadoSJ) ;; 2 no Mercado SJ
-     (at bike6 B07-SantaRita)
-     (at bike7 B07-SantaRita)
-     (at bike8 B07-SantaRita) ;; 3 em Santa Rita
+     (at bike1 station-PcaDaRepublica) ;; 1 na Pça da Rep.
+     (at bike2 station-PcaDoDiario) ;; 1 na Pça do Diario
+     (at bike3 station-CaisDoApolo) ;; 1 no Cais
+     (at bike4 station-MercadoSJ)
+     (at bike5 station-MercadoSJ) ;; 2 no Mercado SJ
+     (at bike6 station-SantaRita)
+     (at bike7 station-SantaRita)
+     (at bike8 station-SantaRita) ;; 3 em Santa Rita
     ) 
     
     (:goal
-
+     
     )
 )

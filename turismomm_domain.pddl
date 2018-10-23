@@ -1,7 +1,7 @@
 (define (domain turismomm)
     (:requirements :strips)
     (:predicates
-        (at ?who ?where)
+        (adj ?where1 ?where2)
         (at ?what ?where)
         (walkable ?from ?to)
         (is-turist ?who)
@@ -10,10 +10,8 @@
         (is-turistic-point ?where)
         (have ?who ?what)
         (have-to-wait5 ?who)
-        (waited ?who))
+        (waited ?who)
         (have-to-deliver ?who ?what)
-        (is-turistic-point ?where)
-        (is-bike-station ?where)
         (visited ?who ?where))
     
     (:action take-bike
@@ -60,7 +58,7 @@
         :precondition (and (is-turist ?who)
                       (is-turistic-point ?where)
                       (at ?who ?where))
-        :effect(visited(?who ?where))                  
+        :effect (visited ?who ?where)                  
     )
     (:action ride
         :parameters (?who ?from ?to ?what)

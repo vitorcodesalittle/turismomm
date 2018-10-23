@@ -34,7 +34,7 @@
      (is-bike-station station-Alfandega)
      (is-bike-station station-CaisDoApolo)
      (is-bike-station station-PcaDaRepublica)
-     
+
      ;; caminhos entre pontos
      (adj station-PcaDaRepublica station-PcaDoDiario) (adj station-PcaDoDiario station-PcaDaRepublica)
      (adj station-PcaDaRepublica station-CaisDoApolo) (adj station-CaisDoApolo station-PcaDaRepublica)
@@ -67,10 +67,11 @@
     ) 
     
     (:goal
-     (visited-before turist-joao BancoDoBrasil PacoAlfandega)
+    (and
+    ;  (visited-before turist-joao BancoDoBrasil PacoAlfandega)
      (visited turist-jose PcaDaRepublica)
      (visited turist-jose MercadoSJ)
      (visited turist-maria IgNossaSraDosPretos)
-     (visited turist-maria MercadoSJ)
+     (visited turist-maria MercadoSJ))
     )
 )

@@ -8,6 +8,19 @@
     )
 
     (:init
+
+     (is-turist turist-joao)
+     (is-turist turist-maria)
+     (is-turist turist-jose)
+
+     (is-bike bike1)
+     (is-bike bike2)
+     (is-bike bike3)
+     (is-bike bike4)
+     (is-bike bike5)
+     (is-bike bike6)
+     (is-bike bike7)
+     (is-bike bike8)
      ;; caminhos entre pontos
      (adj station-PcaDaRepublica station-PcaDoDiario) (adj station-PcaDoDiario station-PcaDaRepublica)
      (adj station-PcaDaRepublica station-CaisDoApolo) (adj station-CaisDoApolo station-PcaDaRepublica)
@@ -42,7 +55,6 @@
     (:goal
      (visited-before turist-joao BancoDoBrasil PacoAlfandega)
      (visited turist-jose PcaDaRepublica)
-     (esperou turist-jose turist-maria MercadoSJ)
      (visited turist-jose MercadoSJ)
      (visited turist-maria IgNossaSraDosPretos)
      (visited turist-maria MercadoSJ)

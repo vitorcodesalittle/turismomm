@@ -34,6 +34,7 @@
         :parameters (?who)
         :precondition (and (is-turist ?who)
                       (have-to-wait5 ?who))
-        :effect(and (waited ?who))
+        :effect(and (waited ?who)
+               (not (have-to-wait5 ?who)))
     )
 )

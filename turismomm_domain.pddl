@@ -7,7 +7,10 @@
         (is-bike ?what)
         (have ?who ?what)
         (have-to-wait5 ?who)
-        (waited ?who))
+        (waited ?who)
+        (is-turistic-point ?where)
+        (is-bike-station ?where)
+        (visited ?who ?where))
     
     (:action take-bike
         :parameters (?who ?what ?where)
@@ -35,5 +38,13 @@
         :precondition (and (is-turist ?who)
                       (have-to-wait5 ?who))
         :effect(and (waited ?who))
+    )
+
+    (:action visit-point
+        :parameters (?who ?where)
+        :precondition (and (is-turist ?who)
+                      (is-turistic-point ?where)
+                      (at ?who ?where))
+        :effect(visited(?who ?where))                  
     )
 )

@@ -74,7 +74,7 @@
     (:goal
     (and
     ;  (visited-before turist-joao BancoDoBrasil PacoAlfandega)
-     (at turist-jose station-SantaRita)
+     (at turist-jose station-PcaDaRepublica)
 
     ;  (visited turist-jose MercadoSJ)
     ;  (visited turist-maria IgNossaSraDosPretos)

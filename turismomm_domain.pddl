@@ -69,7 +69,6 @@
                            (have ?who ?what)
                            (adj ?from ?to)
                            (at ?who ?from)
-                           (at ?what ?from)
                            (not (have-to-deliver ?who ?what)))
         :effect (and (not (at ?who ?from))
                      (not (at ?what ?from))

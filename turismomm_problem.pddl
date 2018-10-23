@@ -9,6 +9,10 @@
 
     (:init
 
+     (waited turist-joao)
+     (waited turist-maria)
+     (waited turist-jose)
+
      (is-turist turist-joao)
      (is-turist turist-maria)
      (is-turist turist-jose)
@@ -61,7 +65,7 @@
      (at bike3 station-CaisDoApolo) ;; 1 no Cais
      (at bike4 station-MercadoSJ)
      (at bike5 station-MercadoSJ) ;; 2 no Mercado SJ
-     (at bike6 station-SantaRita)
+     (at bike6 station-SantaRita)   
      (at bike7 station-SantaRita)
      (at bike8 station-SantaRita) ;; 3 em Santa Rita
     ) 
@@ -69,9 +73,11 @@
     (:goal
     (and
     ;  (visited-before turist-joao BancoDoBrasil PacoAlfandega)
-     (visited turist-jose PcaDaRepublica)
-     (visited turist-jose MercadoSJ)
-     (visited turist-maria IgNossaSraDosPretos)
-     (visited turist-maria MercadoSJ))
+     (at turist-jose station-PcaDaRepublica)
+     
+    ;  (visited turist-jose MercadoSJ)
+    ;  (visited turist-maria IgNossaSraDosPretos)
+    ;  (visited turist-maria MercadoSJ)
+     )
     )
 )

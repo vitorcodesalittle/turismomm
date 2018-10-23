@@ -4,7 +4,7 @@
      turist-joao turist-jose turist-maria ;; turistas
      bike1 bike2 bike3 bike4 bike5 bike6 bike7 bike8 ;; bikes
      station-PcaDoDiario station-MercadoSJ station-SantaRita station-Alfandega station-CaisDoApolo station-PcaDaRepublica ;; pontos de Bike PE
-     MercadoSJ IgNossaSraDosPretos PacoAlfandega BancoDoBrasil ;; pontos turísticos
+     MercadoSJ IgNossaSraDosPretos PacoAlfandega BancoDoBrasil PcaDaRepublica;; pontos turísticos
     )
 
     (:init
@@ -40,6 +40,11 @@
     ) 
     
     (:goal
-     
+     (visited-before turist-joao BancoDoBrasil PacoAlfandega)
+     (visited turist-jose PcaDaRepublica)
+     (visited turist-jose MercadoSJ)
+     (esperou turist-jose turist-maria MercadoSJ)
+     (visited turist-maria IgNossaSraDosPretos)
+     (visited turist-maria MercadoSJ)
     )
 )

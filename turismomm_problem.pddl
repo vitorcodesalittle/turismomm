@@ -42,8 +42,8 @@
     (:goal
      (visited-before turist-joao BancoDoBrasil PacoAlfandega)
      (visited turist-jose PcaDaRepublica)
-     (visited turist-jose MercadoSJ)
      (esperou turist-jose turist-maria MercadoSJ)
+     (visited turist-jose MercadoSJ)
      (visited turist-maria IgNossaSraDosPretos)
      (visited turist-maria MercadoSJ)
     )

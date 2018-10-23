@@ -21,6 +21,20 @@
      (is-bike bike6)
      (is-bike bike7)
      (is-bike bike8)
+
+     (is-turistic-point MercadoSJ)
+     (is-turistic-point IgNossaSraDosPretos)
+     (is-turistic-point PacoAlfandega)
+     (is-turistic-point BancoDoBrasil)
+     (is-turistic-point PcaDaRepublica)
+   
+     (is-bike-station station-PcaDoDiario)
+     (is-bike-station station-MercadoSJ)
+     (is-bike-station station-SantaRita)
+     (is-bike-station station-Alfandega)
+     (is-bike-station station-CaisDoApolo)
+     (is-bike-station station-PcaDaRepublica)
+     
      ;; caminhos entre pontos
      (adj station-PcaDaRepublica station-PcaDoDiario) (adj station-PcaDoDiario station-PcaDaRepublica)
      (adj station-PcaDaRepublica station-CaisDoApolo) (adj station-CaisDoApolo station-PcaDaRepublica)

@@ -7,7 +7,11 @@
         (is-bike ?what)
         (have ?who ?what)
         (have-to-wait5 ?who)
-        (waited ?who))
+        (have-to-deliver ?who ?what)
+        (waited ?who)
+        (is-turistic-point ?where)
+        (is-bike-station ?where)
+        (visited ?who ?where))
     
     (:action take-bike
         :parameters (?who ?what ?where)
@@ -28,6 +32,7 @@
         :effect (and (at ?what ?where)
                 (at ?who ?where)
                 (not (have ?who ?what))
+                (not (have-to-deliver ?who ?what))
                 (have-to-wait5 ?who))
     )
     (:action wait-5minutes
@@ -36,5 +41,27 @@
                       (have-to-wait5 ?who))
         :effect(and (waited ?who)
                (not (have-to-wait5 ?who)))
+    )
+
+    (:action visit-point
+        :parameters (?who ?where)
+        :precondition (and (is-turist ?who)
+                      (is-turistic-point ?where)
+                      (at ?who ?where))
+        :effect(visited(?who ?where))                  
+    )
+
+    (:action ride
+        :parameters (?who ?from ?to ?what)
+        :precondition (and (is-turist ?who)
+                           (is-bike-station ?from)
+                           (is-bike-station ?to)
+                           (is-bike ?what)
+                           (have ?who ?what)
+                           (adj ?from ?to)
+                           (not (have-to-deliver ?who ?what)))
+        :effect (and (not (at ?who ?from))
+                     (at ?who ?to)
+                     (have-to-deliver ?who ?what))    
     )
 )

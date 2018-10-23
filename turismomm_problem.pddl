@@ -53,6 +53,7 @@
      (walkable station-MercadoSJ MercadoSJ) (walkable MercadoSJ station-MercadoSJ)
      (walkable station-Alfandega PacoAlfandega) (walkable PacoAlfandega station-Alfandega)
      (walkable station-CaisDoApolo BancoDoBrasil) (walkable BancoDoBrasil station-CaisDoApolo)
+     (walkable station-PcaDaRepublica PcaDaRepublica) (walkable PcaDaRepublica station-PcaDaRepublica)
 
      ;; localizações iniciais dos turistas
      (at turist-joao station-PcaDoDiario)
@@ -73,8 +74,8 @@
     (:goal
     (and
     ;  (visited-before turist-joao BancoDoBrasil PacoAlfandega)
-     (at turist-jose station-PcaDaRepublica)
-     
+     (at turist-jose station-SantaRita)
+
     ;  (visited turist-jose MercadoSJ)
     ;  (visited turist-maria IgNossaSraDosPretos)
     ;  (visited turist-maria MercadoSJ)

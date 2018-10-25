@@ -69,12 +69,15 @@
      (at bike6 station-SantaRita)   
      (at bike7 station-SantaRita)
      (at bike8 station-SantaRita) ;; 3 em Santa Rita
+
+     (need-money PacoAlfandega)
+     (money-in BancoDoBrasil)
     ) 
     
     (:goal
     (and
     ;  (visited-before turist-joao BancoDoBrasil PacoAlfandega)
-     (visited turist-joao BancoDoBrasil)
+     (visited turist-joao PacoAlfandega)
 
     ;  (visited turist-jose MercadoSJ)
     ;  (visited turist-maria IgNossaSraDosPretos)

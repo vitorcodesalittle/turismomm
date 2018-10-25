@@ -13,7 +13,10 @@
         (waited ?who)
         (have-to-deliver ?who ?what)
         (visited ?who ?where)
-        (have-a-bike ?who))
+        (have-a-bike ?who)
+        (need-money ?where)
+        (have-money ?who)
+        (money-in ?where))
     
     (:action take-bike
         :parameters (?who ?what ?where)
@@ -66,10 +69,14 @@
         :parameters (?who ?where)
         :precondition (and (is-turist ?who)
                       (is-turistic-point ?where)
-                      (at ?who ?where))
+                      (at ?who ?where)
+                      (or (not (need-money ?where))
+                        (and (need-money ?where) (have-money ?who)))
+                      )
         :effect (and (visited ?who ?where) 
                      (not (have-to-wait ?who))
                      (waited ?who)
+                     (when (money-in ?where) (have-money ?who))
                 )                 
     )
     (:action ride

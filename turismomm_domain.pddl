@@ -92,7 +92,6 @@
                            (not (have-to-deliver ?who ?what)))
         :effect (and (not (at ?who ?from))
                      (at ?who ?to)
-                     (at ?what ?to)
                      (have-to-deliver ?who ?what)
                      (have-to-wait ?who))
 

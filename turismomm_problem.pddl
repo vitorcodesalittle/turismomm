@@ -76,12 +76,11 @@
     
     (:goal
     (and
-    ;  (visited-before turist-joao BancoDoBrasil PacoAlfandega)
      (visited turist-joao PacoAlfandega)
-
-    ;  (visited turist-jose MercadoSJ)
-    ;  (visited turist-maria IgNossaSraDosPretos)
-    ;  (visited turist-maria MercadoSJ)
+     (visited turist-jose MercadoSJ)
+     (visited turist-jose PcaDaRepublica)
+     (visited turist-maria IgNossaSraDosPretos)
+     (visited turist-maria MercadoSJ)
      )
     )
 )

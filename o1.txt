@@ -1,0 +1,108 @@
+
+ff: parsing domain file
+domain 'TURISMOMM' defined
+ ... done.
+ff: parsing problem file
+problem 'TURISMOMM-1' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   29 into depth [1]
+                                  28            [1][2]
+                                  27            [1]
+                                  26            [1]
+                                  25            [1][2][3]
+                                  24            [1][2][3][4]
+                                  23            [1]
+                                  22            [1]
+                                  21            [1][2][3][4]
+                                  20            [1][2]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1]
+                                  16            [1][2][3][4]
+                                  15            [1][2][3][4][5]
+                                  14            [1]
+                                  13            [1][2][3][4][5]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1][2][3][4]
+                                   9            [1]
+                                   7            [1]
+                                   6            [1][2][3][4][5]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: TAKE-BIKE TURIST-JOAO BIKE2 STATION-PCADODIARIO
+        1: RIDE TURIST-JOAO STATION-PCADODIARIO STATION-SANTARITA BIKE2
+        2: DELIVER-BIKE TURIST-JOAO BIKE2 STATION-SANTARITA
+        3: WAIT-5MINUTES TURIST-JOAO
+        4: TAKE-BIKE TURIST-JOAO BIKE2 STATION-SANTARITA
+        5: RIDE TURIST-JOAO STATION-SANTARITA STATION-ALFANDEGA BIKE2
+        6: DELIVER-BIKE TURIST-JOAO BIKE2 STATION-ALFANDEGA
+        7: WAIT-5MINUTES TURIST-JOAO
+        8: TAKE-BIKE TURIST-JOSE BIKE3 STATION-CAISDOAPOLO
+        9: RIDE TURIST-JOSE STATION-CAISDOAPOLO STATION-PCADAREPUBLICA BIKE3
+       10: DELIVER-BIKE TURIST-JOSE BIKE3 STATION-PCADAREPUBLICA
+       11: WALK TURIST-JOSE STATION-PCADAREPUBLICA PCADAREPUBLICA
+       12: VISIT-POINT TURIST-JOSE PCADAREPUBLICA
+       13: WALK TURIST-JOSE PCADAREPUBLICA STATION-PCADAREPUBLICA
+       14: TAKE-BIKE TURIST-JOSE BIKE1 STATION-PCADAREPUBLICA
+       15: RIDE TURIST-JOSE STATION-PCADAREPUBLICA STATION-PCADODIARIO BIKE1
+       16: DELIVER-BIKE TURIST-JOSE BIKE1 STATION-PCADODIARIO
+       17: WAIT-5MINUTES TURIST-JOSE
+       18: TAKE-BIKE TURIST-JOSE BIKE1 STATION-PCADODIARIO
+       19: RIDE TURIST-JOSE STATION-PCADODIARIO STATION-MERCADOSJ BIKE1
+       20: DELIVER-BIKE TURIST-JOSE BIKE1 STATION-MERCADOSJ
+       21: WALK TURIST-JOSE STATION-MERCADOSJ MERCADOSJ
+       22: VISIT-POINT TURIST-JOSE MERCADOSJ
+       23: TAKE-BIKE TURIST-MARIA BIKE2 STATION-ALFANDEGA
+       24: RIDE TURIST-MARIA STATION-ALFANDEGA STATION-SANTARITA BIKE2
+       25: DELIVER-BIKE TURIST-MARIA BIKE2 STATION-SANTARITA
+       26: WAIT-5MINUTES TURIST-MARIA
+       27: TAKE-BIKE TURIST-MARIA BIKE2 STATION-SANTARITA
+       28: RIDE TURIST-MARIA STATION-SANTARITA STATION-MERCADOSJ BIKE2
+       29: DELIVER-BIKE TURIST-MARIA BIKE2 STATION-MERCADOSJ
+       30: WALK TURIST-MARIA STATION-MERCADOSJ MERCADOSJ
+       31: VISIT-POINT TURIST-MARIA MERCADOSJ
+       32: WALK TURIST-MARIA MERCADOSJ STATION-MERCADOSJ
+       33: TAKE-BIKE TURIST-MARIA BIKE1 STATION-MERCADOSJ
+       34: RIDE TURIST-MARIA STATION-MERCADOSJ STATION-PCADODIARIO BIKE1
+       35: DELIVER-BIKE TURIST-MARIA BIKE1 STATION-PCADODIARIO
+       36: WALK TURIST-MARIA STATION-PCADODIARIO IGNOSSASRADOSPRETOS
+       37: VISIT-POINT TURIST-MARIA IGNOSSASRADOSPRETOS
+       38: WALK TURIST-MARIA IGNOSSASRADOSPRETOS STATION-PCADODIARIO
+       39: TAKE-BIKE TURIST-MARIA BIKE1 STATION-PCADODIARIO
+       40: RIDE TURIST-MARIA STATION-PCADODIARIO STATION-SANTARITA BIKE1
+       41: DELIVER-BIKE TURIST-MARIA BIKE1 STATION-SANTARITA
+       42: WAIT-5MINUTES TURIST-MARIA
+       43: TAKE-BIKE TURIST-MARIA BIKE1 STATION-SANTARITA
+       44: RIDE TURIST-MARIA STATION-SANTARITA STATION-ALFANDEGA BIKE1
+       45: DELIVER-BIKE TURIST-MARIA BIKE1 STATION-ALFANDEGA
+       46: TAKE-BIKE TURIST-JOAO BIKE1 STATION-ALFANDEGA
+       47: RIDE TURIST-JOAO STATION-ALFANDEGA STATION-CAISDOAPOLO BIKE1
+       48: DELIVER-BIKE TURIST-JOAO BIKE1 STATION-CAISDOAPOLO
+       49: WALK TURIST-JOAO STATION-CAISDOAPOLO BANCODOBRASIL
+       50: VISIT-POINT TURIST-JOAO BANCODOBRASIL
+       51: WALK TURIST-JOAO BANCODOBRASIL STATION-CAISDOAPOLO
+       52: TAKE-BIKE TURIST-JOAO BIKE1 STATION-CAISDOAPOLO
+       53: RIDE TURIST-JOAO STATION-CAISDOAPOLO STATION-ALFANDEGA BIKE1
+       54: DELIVER-BIKE TURIST-JOAO BIKE1 STATION-ALFANDEGA
+       55: WALK TURIST-JOAO STATION-ALFANDEGA PACOALFANDEGA
+       56: VISIT-POINT TURIST-JOAO PACOALFANDEGA
+     
+
+time spent:    0.00 seconds instantiating 657 easy, 15 hard action templates
+               0.00 seconds reachability analysis, yielding 684 facts and 672 actions
+               0.00 seconds creating final representation with 183 relevant facts
+               0.00 seconds building connectivity graph
+               0.02 seconds searching, evaluating 313 states, to a max depth of 5
+               0.02 seconds total time
+

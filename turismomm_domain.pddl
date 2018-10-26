@@ -115,5 +115,5 @@
                      (not (waiting ?who2 ?who1 ?where))
                      (not (have-to-encounter ?who1))
                      (not (have-to-encounter ?who2))
-                )
+                ))
 )

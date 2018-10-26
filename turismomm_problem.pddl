@@ -72,6 +72,10 @@
 
      (need-money PacoAlfandega)
      (money-in BancoDoBrasil)
+     (waiting turist-jose turist-maria MercadoSJ)
+     (waiting turist-maria turist-jose MercadoSJ)
+     (have-to-encounter turist-maria)
+     (have-to-encounter turist-jose)
     ) 
     
     (:goal

@@ -8,15 +8,13 @@
     )
 
     (:init
-
-     (waited turist-joao)
-     (waited turist-maria)
-     (waited turist-jose)
-
+     
+     ;; Turistas 
      (is-turist turist-joao)
      (is-turist turist-maria)
      (is-turist turist-jose)
 
+     ;; Bikes
      (is-bike bike1)
      (is-bike bike2)
      (is-bike bike3)
@@ -26,12 +24,14 @@
      (is-bike bike7)
      (is-bike bike8)
 
+     ;; Pontos Turísticos
      (is-turistic-point MercadoSJ)
      (is-turistic-point IgNossaSraDosPretos)
      (is-turistic-point PacoAlfandega)
      (is-turistic-point BancoDoBrasil)
      (is-turistic-point PcaDaRepublica)
-   
+
+     ;;Estaçoes
      (is-bike-station station-PcaDoDiario)
      (is-bike-station station-MercadoSJ)
      (is-bike-station station-SantaRita)
@@ -69,13 +69,19 @@
      (at bike6 station-SantaRita)   
      (at bike7 station-SantaRita)
      (at bike8 station-SantaRita) ;; 3 em Santa Rita
-
-     (need-money PacoAlfandega)
-     (money-in BancoDoBrasil)
-     (waiting turist-jose turist-maria MercadoSJ)
-     (waiting turist-maria turist-jose MercadoSJ)
-     (have-to-encounter turist-maria)
-     (have-to-encounter turist-jose)
+     
+     ;; Começam sem precisar esperar para pegar um bike
+     (waited turist-joao)
+     (waited turist-maria)
+     (waited turist-jose)
+     
+     ;; Restrições do problema
+     (need-money PacoAlfandega) ;; Precisa do dinheiro para ir ao Paço
+     (money-in BancoDoBrasil) ;; O dinheiro está no Banco
+     (waiting turist-jose turist-maria MercadoSJ) ;; José espera por Maria para poder visitar o Mercado
+     (waiting turist-maria turist-jose MercadoSJ) ;; Maria espera por José para poder visitar o Mercado
+     (have-to-encounter turist-maria) ;; Quando ocorre o encontro
+     (have-to-encounter turist-jose) ;; Quando ocorre o encontro
     ) 
     
     (:goal
